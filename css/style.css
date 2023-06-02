@@ -446,14 +446,15 @@ section#snoopy > #content {
 {
     padding: 300px 30px 150px 0;
 }
-.section-2
+.section-2,
+.section-4
 {
     padding: 150px 0 300px 30px;
 }
-.section-4
-{
-    padding: 150px 0 0 30px;
-}
+/*.section-4*/
+/*{*/
+/*    padding: 150px 0 0 30px;*/
+/*}*/
 
 .article {
     position: relative;
@@ -526,9 +527,10 @@ section#snoopy > #content {
 .article_text>p
 {
     color: #0b0a0a;
-    font-size: 18px;
+    font-size: 1.2em;
     line-height: 1.8;
     text-align: justify;
+    padding-left: 1.4em;
 }
 
 .slideSection {
@@ -635,16 +637,19 @@ section#snoopy > #content {
         font-size: 20px;
     }
     .section-1,
-    .section-2 {
+    .section-2,
+    .section-3,
+    .section-4
+    {
         padding-top:150px;
         padding-bottom:0;
         min-height:auto;
     }
-    .section-1{
-        padding-left:0;
-        padding-right:0;
-    }
-    .section-2{
+    .section-1,
+    .section-2,
+    .section-3,
+    .section-4
+    {
         padding-left:0;
         padding-right:0;
     }
@@ -652,7 +657,10 @@ section#snoopy > #content {
         margin-bottom: 100px;
     }
     .article_image-1,
-    .article_image-2 {
+    .article_image-2,
+    .article_image-3,
+    .article_image-4
+    {
         width: 90%;
         margin-bottom: 50px;
     }
@@ -661,7 +669,7 @@ section#snoopy > #content {
     .article_text-3,
     .article_text-4
     {
-        width: 80%;
+        width: 90%;
         padding: 16px;
     }
 

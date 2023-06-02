@@ -357,9 +357,9 @@
         gsap.set(".pn53", { scale: 0, width: "100%", height: "100%", left: 0, top: "12.5%", });
 
         backTl.to(".waku50", { scale: 1.2, duration: 0.5})
-            .to(".pn51", { scale: 1, left: "-37.5%", top: "5%", duration: 1 },"-=0.5")
+            .to(".pn51", { scale: 1, left: "-15.5%", top: "5%", duration: 1 },"-=0.5")
             .to(".pn51", { opacity: 0, duration: 0.2 }, "-=0.2")
-            .to(".pn52", { scale: 1, left: "62.5%", top: "55%", duration: 1 }, "-=0.5")
+            .to(".pn52", { scale: 1, left: "42.5%", top: "35%", duration: 1 }, "-=0.5")
             .to(".pn52", { opacity: 0, duration: 0.2 }, "-=0.2")
             .to(".pn53", { scale: 1, duration: 1 }, "-=0.5")
 

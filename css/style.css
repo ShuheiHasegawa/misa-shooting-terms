@@ -1,26 +1,23 @@
 @charset "utf-8";
 
-@font-face {
-    font-family: FontSnoopy;
-    src: url('/fonts/snoopy_reg-webfont.otf');
-}
+/*@font-face {*/
+/*    font-family: FontSnoopy;*/
+/*    src: url('/fonts/snoopy_reg-webfont.otf');*/
+/*}*/
 
 /* @font-face kit by Fonts2u (https://fonts2u.com) */
-@font-face {
-    font-family: Peanuts;
-    src:url('/fonts/PEANUTS_.eot?') format('eot'),
-    url('/fonts/PEANUTS_.woff') format('woff'),
-    url('/fonts/PEANUTS_.ttf') format('truetype'),
-    url('/fonts/PEANUTS_.svg#Peanuts') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-.font-snoopy {
-    /* font-family:'FontSnoopy'; */
-    font-family: Peanuts, serif;
-
-    /* font-size:200%; */
-}
+/*@font-face {*/
+/*    font-family: Peanuts;*/
+/*    src:url('/fonts/PEANUTS_.eot?') format('eot'),*/
+/*    url('/fonts/PEANUTS_.woff') format('woff'),*/
+/*    url('/fonts/PEANUTS_.ttf') format('truetype'),*/
+/*    url('/fonts/PEANUTS_.svg#Peanuts') format('svg');*/
+/*    font-weight: normal;*/
+/*    font-style: normal;*/
+/*}*/
+/*.font-snoopy {*/
+/*    font-family: Peanuts, serif;*/
+/*}*/
 
 body {
     /* font-family:'Peanuts'; */
@@ -240,13 +237,13 @@ main {
     letter-spacing: .30rem;
 }
 
-.contants{
+.contents {
     position:relative;
-    width:50%;
+    width:50vmax;
     margin:4rem auto;
     text-align:left;
 }
-.contants img{
+.contents img{
     max-width:100%;
     height:auto;
     border-radius:20px;
@@ -287,12 +284,12 @@ main {
     .c-header {
         top: 0%;
     }
-    .contants{
+    .contents {
         width:94%;
     }
     .c-mv-pic>div:nth-child(1) {
         width: 140px;
-        left: 0%;
+        left: 5%;
         top:0%;
     }
     .c-mv-pic>div:nth-child(2) {
@@ -308,12 +305,12 @@ main {
     }
     .c-mv-pic>div:nth-child(4) {
         width: 160px;
-        right: 0%;
+        right: 5%;
         top:3%;
     }
     .c-mv-pic>div:nth-child(5) {
         width: 130px;
-        left: 0%;
+        left: 5%;
         top:55%;
     }
     .c-mv-pic>div:nth-child(6) {
@@ -424,7 +421,7 @@ section#snoopy > #content {
     height: 2500px;
 }
 
-#snoopy-area {
+#scale-snoopy-area {
     position: relative;
     height: 80vh;
     width: 100%;
@@ -432,7 +429,7 @@ section#snoopy > #content {
     place-content: center;
 }
 
-#snoopy-area img {
+#scale-snoopy-area img {
     height: 100px;
 }
 
@@ -599,8 +596,7 @@ section#snoopy > #content {
     transition-duration: 0.5s;
 }
 
-.bottom-1,
-.bottom-2 {
+.last-msg-area {
     height: 100vh;
     width: 100%;
     display: flex;
@@ -609,6 +605,8 @@ section#snoopy > #content {
     justify-content: center;
     /*transition: background-color 0.7s ease-out;*/
     overflow: hidden;
+    color: #fff;
+    background: #0b0a0a;
 }
 .bottom_text-1,
 .bottom_text-2 {
@@ -617,17 +615,23 @@ section#snoopy > #content {
 
     /* font-family: "EB Garamond", serif; */
 }
-.bottom-1.is-crossed-1{
-    background: #0b0a0a;
+.last-msg-area.is-crossed-1 {
+    background: #fff;
 }
-.bottom-2.is-crossed-2{
-    background: #999999;
-}
-.bottom-1.is-crossed-1 .bottom_text-1 {
-    color: #ffffff;
-}
-.bottom-2.is-crossed-2 .bottom_text-2 {
+.last-msg-area.is-crossed-1 .bottom_text-1 {
+    /*color: #ffffff;*/
     color: #0b0a0a;
+}
+
+#snoopy-plain {
+    height: 25vmax;
+}
+#love-snoopy-area {
+    margin-top: 25vmax;
+    margin-bottom: 10vmax;
+}
+#love-snoopy {
+    height: 35vmax;
 }
 
 @media screen and (width >= 248px) and (width <= 768px){
@@ -712,18 +716,25 @@ section#snoopy > #content {
     font-size: 24px;
 }
 
-.area50{
+.area50 {
     overflow: hidden;
 }
-.wrap50{
-    position: relative; height: 100vh;
+.wrap50 {
+    position: relative;
+    height: 100vh;
 }
-.waku50{
-    height: 100%;
+.waku50 {
+    height: 100vh;
 }
-.pn50{
+.pn50 {
     position: absolute;
 }
-.pn51{ background: #346c9c; }
-.pn52{ background: #b1c3cb; }
-.pn53{ background: #595757; }
+.pn51 {
+    /*background: #346c9c;*/
+}
+.pn52 {
+    /*background: #b1c3cb;*/
+}
+.pn53 {
+    /*background: #595757;*/
+}

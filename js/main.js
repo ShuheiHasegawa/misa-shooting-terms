@@ -64,7 +64,7 @@
             jsLoaderSnoopy, {
                 scale: 50,
                 opacity: 0,
-                ease: "power1.in",
+                ease: "power4.in",
             }
         ).to(
             jsLoaderBg, {
@@ -196,7 +196,7 @@
     gsap.from("#cameraPath", {
         xPercent: 100,
         yPercent: 100,
-        ease: "power2.out",
+        ease: "power4.out",
         duration: 1.5,
         scrollTrigger: {
             trigger: "#cameraSVG",
@@ -206,12 +206,12 @@
         }
     });
 
-    gsap.from("#snoopy-love", {
-        xPercent: -100,
+    gsap.from("#love-snoopy", {
+        xPercent: -200,
         yPercent: 100,
         duration: 3,
         scrollTrigger: {
-            trigger: "#snoopy-img1",
+            trigger: "#love-snoopy-area",
             // start: "-180%", // when the center of the trigger hits 40% from the top of the viewport
             // start: 'top center', // アニメーション開始位置
             start: 'top center', //y軸50%からさらに10%プラス側に指定
@@ -227,101 +227,16 @@
     gsap.from("#snoopy-plain", {
         xPercent: 100,
         yPercent: 100,
-        ease: "power2.out",
+        ease: "power4.out",
         duration: 1.5,
         scrollTrigger: {
-            trigger: "#snoopy-img2",
+            trigger: "#snoopy-plain-wrap",
             start: "center 110%", // when the center of the trigger hits 40% from the top of the viewport
             end: "10%", // end after scrolling 1000px beyond the start
             scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
             // markers: true
         }
     });
-
-    gsap.from("#footPath", {
-        xPercent: -100,
-        yPercent: 100,
-        ease: "power2.out",
-        duration: 1.5,
-        scrollTrigger: {
-            trigger: "#footSVG",
-            // start: "center 110%", // when the center of the trigger hits 40% from the top of the viewport
-            // end: "10%", // end after scrolling 1000px beyond the start
-            start: 'top center+=10%', //y軸50%からさらに10%プラス側に指定
-            end: 'bottom+=600 top', // 要素のbottomを下方向に200px
-            scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-            // trigger: "#footSVG",
-            // trigger: "#snoopy-area", // What element triggers the scroll
-            // start: "center 110%", // when the center of the trigger hits 40% from the top of the viewport
-            // start: "bottom bottom",
-            // end: "10%", // end after scrolling 1000px beyond the start
-            // scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-            // markers: true
-        }
-    });
-
-    const snoopyImg = document.querySelector("#snoopy");
-    const snoopyArea = gsap.timeline({
-        scrollTrigger: {
-            id: "snoopy", // Custom label to the marker
-            trigger: "#snoopy-area", // What element triggers the scroll
-            scrub: 0.5, // Add a small delay of scrolling and animation. `true` is direct
-            start: "top top", // Start at top of Trigger and at the top of the viewport
-            end: "+=100% 50px", // The element is 500px hight and end 50px from the top of the viewport
-            // markers:true,
-        }
-    });
-
-    snoopyArea
-        .from(snoopyImg, {
-            scale: 30,
-            // opacity: 0,
-        })
-        // .to(".image-1", {
-        //     scale: 1.5
-        // }, "sameTime")
-        .to(snoopyImg, {
-            scale: 1,
-            // opacity: 1,
-        })
-
-    // gsap.from("#snoopy", {
-    //     // xPercent: 100,
-    //     // yPercent: 100,
-    //     // duration: 2,
-    //     scale: 1,
-    //     scrollTrigger: {
-    //         trigger: "#snoopy-area",
-    //         start: "top 40%",
-    //         end: "+=2000",
-    //         markers:true,
-    //         pin:true,
-    //         scrub: true
-    //     }
-    // });
-
-    // gsap.set(snoopyImg, {
-    //     opacity: 1,
-    //     scale: 1,
-    // });
-    // let tl = gsap.timeline({
-    //     scrollTrigger: {
-    //         start: "top top",
-    //         end: "bottom bottom",
-    //         scrub: 0.2,
-    //     },
-    //     defaults: {
-    //         duration: 1
-    //     }
-    // })
-    //     tl.to(snoopyImg, {
-    //         scale: 2,
-    //     }, 0)
-        // .to("#whiteLayer", {
-        //     alpha: 0,
-        //     ease: "power1.in",
-        //     duration: 1 - 0.25
-        // }, 0.25);
 
     ScrollTrigger.create({
         trigger: ".article_image-1",
@@ -373,55 +288,56 @@
         ease: "none",
     });
 
-    ScrollTrigger.create({
-        trigger: ".bottom-1",
-        start: "top 50%",
-        // start: "bottom bottom",
-        // toggleClass: "is-crossed-1",
-    });
-    const bottomTl_1 = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".bottom-1",
-            start: "top bottom",
-            // start: "top top",
-            end: "center center",
-            // end: "top top",
-            // end: 'bottom+=600 top', // 要素のbottomを下方向に200px
-            scrub: 1,
-            // markers: true
-        },
-    });
-    bottomTl_1
-        .fromTo('.bottom-1', {
-            backgroundColor: "#fff",
-        }, {
-            backgroundColor: "#0a0b0b",
-        })
-        .fromTo(
-            ".js-bottom_left-1",
-            {
-                xPercent: -100,
-            },
-            {
-                xPercent: 0
-            }
-        )
-        .fromTo(
-            ".js-bottom_right-1",
-            {
-                xPercent: 100,
-            },
-            {
-                xPercent: 0
-            },
-            "<"
-        );
+    // ScrollTrigger.create({
+    //     trigger: ".last-msg-area",
+    //     // start: "top bottom",
+    //     // start: "bottom bottom",
+    //     toggleClass: "is-crossed-1",
+    // });
+    // const bottomTl_1 = gsap.timeline({
+    //     scrollTrigger: {
+    //         trigger: ".last-msg-area",
+    //         start: "top bottom",
+    //         // end: "center center",
+    //         // end: "top top",
+    //         end: 'bottom+=600 center', // 要素のbottomを下方向に200px
+    //         scrub: 1,
+    //         markers: true
+    //     },
+    // });
+    // bottomTl_1
+    //     .fromTo('.last-msg-area', {
+    //         backgroundColor: "#fff",
+    //     }, {
+    //         backgroundColor: "#0a0b0b",
+    //     })
+    //     .fromTo(
+    //         ".js-bottom_left-1",
+    //         {
+    //             xPercent: -100,
+    //         },
+    //         {
+    //             xPercent: 0
+    //         }
+    //     )
+    //     .fromTo(
+    //         ".js-bottom_right-1",
+    //         {
+    //             xPercent: 100,
+    //         },
+    //         {
+    //             xPercent: 0
+    //         },
+    //         "<"
+    //     );
 
-        gsap.to(".box", 5,{
-            repeat: 999,
+        gsap.to(".woodstock-wrap", 5,{
+            repeat: -1,
+            yoyo: true,
             repeatDelay: 1,
             ease: "power1.inOut",
             // rotationY: 180,
+            duration: 5,
             motionPath: [
                 // {
                 //     x:270, y:30
@@ -430,9 +346,9 @@
                 // },{
                 //     x:30, y:30
                 // }
-                {x:500, y:400},
-                {x:300, y:0},
-                {x:100, y:250},
+                { x: '20%', y: 0 },
+                { x: '50%', y: '30%'},
+                { x: '80%', y: '60%'},
             ]
             // motionPath:{
             //     path: "#path",
@@ -464,7 +380,7 @@
         gsap.set(".waku50", { scale: 0.9, });
         gsap.set(".pn51", { scale: 0, width: "75%", height: "50%", left: "12.5%", top: "25%", });
         gsap.set(".pn52", { scale: 0, width: "75%", height: "50%", left: "12.5%", top: "25%", });
-        gsap.set(".pn53", { scale: 0, width: "100%", height: "75%", left: 0, top: "12.5%", });
+        gsap.set(".pn53", { scale: 0, width: "100%", height: "100%", left: 0, top: "12.5%", });
 
         backTl.to(".waku50", { scale: 1.2, duration: 0.5})
             .to(".pn51", { scale: 1, left: "-37.5%", top: "5%", duration: 1 },"-=0.5")
@@ -472,6 +388,90 @@
             .to(".pn52", { scale: 1, left: "62.5%", top: "55%", duration: 1 }, "-=0.5")
             .to(".pn52", { opacity: 0, duration: 0.2 }, "-=0.2")
             .to(".pn53", { scale: 1, duration: 1 }, "-=0.5")
+
+        ScrollTrigger.create({
+            trigger: ".last-msg-area",
+            // start: "top 50%",
+            // start: "top 50%",
+            // start: "top -60",
+            end: `center center`,
+            // end: `center -80%`,
+            toggleClass: "is-crossed-1",
+        });
+        const bottomTl_1 = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".last-msg-area",
+                start: "top bottom",
+                end: "center center",
+                scrub: 1,
+            },
+        });
+        bottomTl_1
+            .fromTo(
+                ".js-bottom_left-1",
+                {
+                    xPercent: -100,
+                },
+                { xPercent: 0 }
+            )
+            .fromTo(
+                ".js-bottom_right-1",
+                {
+                    xPercent: 100,
+                },
+                { xPercent: 0 },
+                "<"
+            );
+
+        const snoopyArea = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#scale-snoopy-area", // What element triggers the scroll
+                scrub: 0.5, // Add a small delay of scrolling and animation. `true` is direct
+                // start: "top top", // Start at top of Trigger and at the top of the viewport
+                start: "top 40%",
+                // start: "top center", // Start at top of Trigger and at the top of the viewport
+                end: `center center`,
+                // end: "+=100% 50px", // The element is 500px hight and end 50px from the top of the viewport
+                // markers:true,
+            }
+        });
+
+        snoopyArea
+            .from('#scale-snoopy', {
+                scale: 20,
+                // opacity: 0,
+            })
+            // .to(".image-1", {
+            //     scale: 1.5
+            // }, "sameTime")
+            .to('#scale-snoopy', {
+                scale: 1,
+                // opacity: 1,
+            });
+
+        gsap.from("#footPath", {
+            xPercent: -100,
+            yPercent: 100,
+            ease: "power4.out",
+            duration: 1.5,
+            scrollTrigger: {
+                trigger: "#footSVG",
+                start: "center 110%", // when the center of the trigger hits 40% from the top of the viewport
+                // start: 'top center-=10%', //y軸50%からさらに10%プラス側に指定
+                // end: `top top`,
+                end: `center center`,
+                // end: "10%", // end after scrolling 1000px beyond the start
+                // end: 'bottom-=800 top', // 要素のbottomを下方向に200px
+                scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+                // trigger: "#footSVG",
+                // start: "center 110%", // when the center of the trigger hits 40% from the top of the viewport
+                // start: "bottom bottom",
+                // end: "10%", // end after scrolling 1000px beyond the start
+                // scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+                // markers: true
+            }
+        });
+
 
         ////3点リード
     const addTruncationCSS = (element, lineNumber) => {

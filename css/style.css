@@ -608,13 +608,6 @@ section#snoopy > #content {
     color: #fff;
     background: #0b0a0a;
 }
-.bottom_text-1,
-.bottom_text-2 {
-    font-size: 48px;
-    font-weight: bold;
-
-    /* font-family: "EB Garamond", serif; */
-}
 .last-msg-area.is-crossed-1 {
     background: #fff;
 }
@@ -708,12 +701,15 @@ section#snoopy > #content {
 }
 
 .name-sign {
-    position: absolute;
+    /*position: absolute;*/
     /*top: 50%;*/
-    top: -35vh;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    /*bottom: 15vmax;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%,-50%);*/
     font-size: 24px;
+    text-align: center;
+    /*margin-top: 20vmax;*/
+    padding-top: 2vmax;
 }
 
 .area50 {

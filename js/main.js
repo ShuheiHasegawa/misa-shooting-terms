@@ -331,32 +331,6 @@
     //         "<"
     //     );
 
-        gsap.to(".woodstock-wrap", 5,{
-            repeat: -1,
-            yoyo: true,
-            repeatDelay: 1,
-            ease: "power1.inOut",
-            // rotationY: 180,
-            duration: 5,
-            motionPath: [
-                // {
-                //     x:270, y:30
-                // },{
-                //     x:150, y:180
-                // },{
-                //     x:30, y:30
-                // }
-                { x: '20%', y: 0 },
-                { x: '50%', y: '30%'},
-                { x: '80%', y: '60%'},
-            ]
-            // motionPath:{
-            //     path: "#path",
-            //     align: "#path",//pathのIDを持つ要素を選択、ターゲットが左上が揃う
-            //     alignOrigin: [0.5, 0.5],  //ターゲットを中心に置きたい場合はalignOrigin: [0.5, 0.5]
-            // }
-        });
-
         const area = document.querySelector(".area50");
         const panels = document.querySelectorAll(".pn50");
         const num = panels.length;
@@ -423,6 +397,41 @@
                 "<"
             );
 
+        gsap.to("#woodstock", 5,{
+            repeat: -1,
+            yoyo: true,
+            repeatDelay: 1,
+            ease: "power1.inOut",
+            // rotationY: 180,
+            duration: 5,
+            // x: '60%',
+            // y: 0,
+
+            motionPath :{
+                path: '.treeBottomPath',
+                autoRotate: false
+            },
+
+            // motionPath: [
+                // {
+                //     x:270, y:30
+                // },{
+                //     x:150, y:180
+                // },{
+                //     x:30, y:30
+                // }
+                // { x: '60%', y: 0 },
+                // { x: '70%', y: 0 },
+                // { x: '60%', y: 0 },
+            // ]
+            // motionPath:{
+            //     path: "#path",
+            //     align: "#path",//pathのIDを持つ要素を選択、ターゲットが左上が揃う
+            //     alignOrigin: [0.5, 0.5],  //ターゲットを中心に置きたい場合はalignOrigin: [0.5, 0.5]
+            // }
+        });
+
+
         const snoopyArea = gsap.timeline({
             scrollTrigger: {
                 trigger: "#scale-snoopy-area", // What element triggers the scroll
@@ -459,7 +468,7 @@
                 start: "center 110%", // when the center of the trigger hits 40% from the top of the viewport
                 // start: 'top center-=10%', //y軸50%からさらに10%プラス側に指定
                 // end: `top top`,
-                end: `center center`,
+                end: `center center+=5%`,
                 // end: "10%", // end after scrolling 1000px beyond the start
                 // end: 'bottom-=800 top', // 要素のbottomを下方向に200px
                 scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar

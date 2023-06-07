@@ -359,7 +359,7 @@
         backTl.to(".waku50", { scale: 1.2, duration: 0.5})
             .to(".pn51", { scale: 1, left: "-15.5%", top: "5%", duration: 1 },"-=0.5")
             .to(".pn51", { opacity: 0, duration: 0.2 }, "-=0.2")
-            .to(".pn52", { scale: 1, left: "42.5%", top: "35%", duration: 1 }, "-=0.5")
+            .to(".pn52", { scale: 1, left: "42.5%", top: "15%", duration: 1 }, "-=0.5")
             .to(".pn52", { opacity: 0, duration: 0.2 }, "-=0.2")
             .to(".pn53", { scale: 1, duration: 1 }, "-=0.5")
 

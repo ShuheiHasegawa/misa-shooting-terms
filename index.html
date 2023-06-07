@@ -6,7 +6,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>Misa Portfolio</title>
     <meta name="copyright" content="(C)ROOTSTYLEDESIGN All rights reserved.">
-    <link rel="shortcut icon" href="https://www.rootstyledesign.com/favicon.ico">
+    <link rel="shortcut icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,6 +49,27 @@
 
     <!-- MV -->
     <section class="c-mv js-mv">
+
+        <div id="video-area">
+            <video id="video" poster="img/landscape/_DSC9460.jpg" webkit-playsinline playsinline muted autoplay loop>
+                <!--
+                poster：動画ファイルが利用できない環境で代替表示される画像
+                webkit-playsinline：iOS 9までのSafari用インライン再生指定
+                playsinline：iOS 10以降のSafari用インライン再生指定
+                muted：音声をミュートさせる
+                autoplay：動画を自動再生させる
+                loop：動画をループさせる
+                controls：コントロールバーを表示する
+                -->
+<!--                <source src="video/Ghana_CM_Misa_Voice.mp4" type="video/mp4">-->
+                <source src="video/hokkaido.mp4" type="video/mp4">
+                <!--                <source src="video/movie.ogv" type="video/ogv">-->
+                <!--                <source src="video/movie.webm" type="video/webm">-->
+                <p>動画を再生できる環境ではありません。</p>
+            </video>
+            <!--/video-area-->
+        </div>
+
         <!-- 丸い図形 -->
         <div class="c-mv-pic js-mv-pic">
             <div class="c-pic" id="item1" style="transform: translate(0px, 0px); opacity: 1;">
@@ -64,7 +85,7 @@
                 <img src="img/portrait/_DSC5799.jpg">
             </div>
             <div class="c-pic" id="item5" style="transform: translate(0px, 0px); opacity: 1;">
-                <img src="img/portrait/_DSC6683.jpg">
+                <img src="img/landscape/_DSC5280.jpg">
             </div>
             <div class="c-pic" id="item6" style="transform: translate(0px, 0px); opacity: 1;">
                 <img src="img/portrait/_DSC6581.jpg">
@@ -84,6 +105,7 @@
                 <p class="c-mv_tit-read js-mv_tit-read" style="transform: translate(0px, 0px); opacity: 1;">Getting Started with GSAP</p>
             </div>
         </div> -->
+
     </section>
 
     <div>
@@ -165,7 +187,7 @@
 
     <div class="section-3 js-section-card">
         <div class="article">
-            <img class="article_image-3" src="img/landscape/_DSC5280.jpg" alt="" />
+            <img class="article_image-3" src="img/landscape/_DSC9460.jpg" alt="" />
             <div class="article_text-3">
                 <h2>○ 交通費に関して</h2>
                 <p class="flow-text">
@@ -184,7 +206,7 @@
 
     <div class="section-4 js-section-card">
         <div class="article">
-            <img class="article_image-4" src="img/landscape/_DSC2107.jpg" alt="" />
+            <img class="article_image-4" src="img/landscape/_DSC1664.jpg" alt="" />
             <div class="article_text-4">
                 <h2>○ 衣装について</h2>
                 <p class="flow-text">
@@ -294,7 +316,7 @@
                 をDMにてお送りください。
             </p>
         </div>
-        <div style="text-align: center; padding-top: 3vmax; padding-bottom: 3vmax;">
+        <div style="text-align: center; padding-top: 5vmax; padding-bottom: 5vmax;">
             <a href="https://twitter.com/misaphoto33" target="_blank">
                 <i class="fa-brands fa-twitter fa-xl" style="color: #55acee; font-size: 3.5em"></i>
             </a>

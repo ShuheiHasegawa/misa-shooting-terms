@@ -6,7 +6,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>Misa Portfolio</title>
     <meta name="copyright" content="(C)ROOTSTYLEDESIGN All rights reserved.">
-    <link rel="shortcut icon" href="https://www.rootstyledesign.com/favicon.ico">
+    <link rel="shortcut icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +24,7 @@
             <div style="padding-bottom: 2em;">
                 <img class="js-loader-snoopy" src="./img/snoopy/silhouette-left-white.png" alt="" height="100px;">
             </div>
-            <div class="c-optext js-loader-Optext font-snoopy">
+            <div class="c-optext js-loader-Optext">
                 <span>m</span>
                 <span>i</span>
                 <span>s</span>
@@ -49,15 +49,50 @@
 
     <!-- MV -->
     <section class="c-mv js-mv">
+
+        <div id="video-area">
+            <video id="video" poster="img/landscape/_DSC9460.jpg" webkit-playsinline playsinline muted autoplay loop>
+                <!--
+                poster：動画ファイルが利用できない環境で代替表示される画像
+                webkit-playsinline：iOS 9までのSafari用インライン再生指定
+                playsinline：iOS 10以降のSafari用インライン再生指定
+                muted：音声をミュートさせる
+                autoplay：動画を自動再生させる
+                loop：動画をループさせる
+                controls：コントロールバーを表示する
+                -->
+<!--                <source src="video/Ghana_CM_Misa_Voice.mp4" type="video/mp4">-->
+                <source src="video/hokkaido.mp4" type="video/mp4">
+                <!--                <source src="video/movie.ogv" type="video/ogv">-->
+                <!--                <source src="video/movie.webm" type="video/webm">-->
+                <p>動画を再生できる環境ではありません。</p>
+            </video>
+            <!--/video-area-->
+        </div>
+
         <!-- 丸い図形 -->
         <div class="c-mv-pic js-mv-pic">
-            <div class="c-pic" id="item1" style="transform: translate(0px, 0px); opacity: 1;"><img src="img/open1.jpg"></div>
-            <div class="c-pic" id="item2" style="transform: translate(0px, 0px); opacity: 1;"><img src="img/open2.jpg"></div>
-            <div class="c-pic" id="item3" style="transform: translate(0px, 0px); opacity: 1;"><img src="img/open3.jpg"></div>
-            <div class="c-pic" id="item4" style="transform: translate(0px, 0px); opacity: 1;"><img src="img/open4.jpg"></div>
-            <div class="c-pic" id="item5" style="transform: translate(0px, 0px); opacity: 1;"><img src="img/open5.jpg"></div>
-            <div class="c-pic" id="item6" style="transform: translate(0px, 0px); opacity: 1;"><img src="img/open6.jpg"></div>
-            <div class="c-pic" id="item7" style="transform: translate(0px, 0px); opacity: 1;"><img src="img/open7.jpg"></div>
+            <div class="c-pic" id="item1" style="transform: translate(0px, 0px); opacity: 1;">
+                <img src="img/portrait/_DSC9424.jpg">
+            </div>
+            <div class="c-pic" id="item2" style="transform: translate(0px, 0px); opacity: 1;">
+                <img src="img/portrait/_DSC7310.jpg">
+            </div>
+            <div class="c-pic" id="item3" style="transform: translate(0px, 0px); opacity: 1;">
+                <img src="img/portrait/_DSC8127.jpg">
+            </div>
+            <div class="c-pic" id="item4" style="transform: translate(0px, 0px); opacity: 1;">
+                <img src="img/portrait/_DSC5799.jpg">
+            </div>
+            <div class="c-pic" id="item5" style="transform: translate(0px, 0px); opacity: 1;">
+                <img src="img/landscape/_DSC5280.jpg">
+            </div>
+            <div class="c-pic" id="item6" style="transform: translate(0px, 0px); opacity: 1;">
+                <img src="img/portrait/_DSC6581.jpg">
+            </div>
+            <div class="c-pic" id="item7" style="transform: translate(0px, 0px); opacity: 1;">
+                <img src="img/portrait/_Z9B6522.jpg">
+            </div>
         </div>
 
         <!-- <div class="l-inner">
@@ -70,13 +105,14 @@
                 <p class="c-mv_tit-read js-mv_tit-read" style="transform: translate(0px, 0px); opacity: 1;">Getting Started with GSAP</p>
             </div>
         </div> -->
+
     </section>
 
     <div>
 <!--        <div style="text-align: center">-->
 <!--            <img src="./img/snoopy/wish.png" alt="" height="200">-->
 <!--        </div>-->
-        <div style="padding: 2em;">
+        <div style="padding: 2em; text-align: center">
             <p class="flow-text">
                 みさです！
             </p>
@@ -92,7 +128,7 @@
 <!--        </svg>-->
 <!--    </div>-->
 
-    <div class="contants">
+    <div class="contents">
         <svg id="cameraSVG" viewBox="0 0 800 500">
             <image opacity="0.65" mask="url('#cameraMask')" preserveAspectRatio="xMidYMid slice" href="./img/snoopy/camera.png" width="100%" />
             <mask id="cameraMask">
@@ -106,7 +142,7 @@
 
     <div class="section-1 js-section-card">
         <div class="article">
-            <img class="article_image-1" src="img/section_img_1.jpg" alt="" />
+            <img class="article_image-1" src="img/opening/_DSC8794.jpg" alt="" />
             <div class="article_text-1">
                 <h2>○ 個人撮影について</h2>
                 <p class="flow-text">
@@ -126,7 +162,7 @@
 
     <div class="section-2 js-section-card">
         <div class="article">
-            <img class="article_image-2" src="img/section_img_2.jpg" alt="" />
+            <img class="article_image-2" src="img/landscape/_Z9B7200.jpg" alt="" />
             <div class="article_text-2">
                 <h2>○ 撮影時間について</h2>
                 <p class="flow-text">
@@ -143,17 +179,15 @@
         </div>
     </div>
 
-        <div class="slide_wrapper">
-            <div class="contants">
-                <div id="snoopy-img2">
-                    <img id="snoopy-plain" src="./img/snoopy/plain.png" alt="">
-                </div>
+        <div class="slide_wrapper" style="height: 60vmax; display:flex; justify-content:center; align-items:center;">
+            <div id="snoopy-plain-wrap">
+                <img id="snoopy-plain" src="./img/snoopy/plain.png" alt="">
             </div>
         </div>
 
     <div class="section-3 js-section-card">
         <div class="article">
-            <img class="article_image-3" src="img/section_img_1.jpg" alt="" />
+            <img class="article_image-3" src="img/landscape/_DSC9460.jpg" alt="" />
             <div class="article_text-3">
                 <h2>○ 交通費に関して</h2>
                 <p class="flow-text">
@@ -172,7 +206,7 @@
 
     <div class="section-4 js-section-card">
         <div class="article">
-            <img class="article_image-4" src="img/section_img_2.jpg" alt="" />
+            <img class="article_image-4" src="img/landscape/_DSC1664.jpg" alt="" />
             <div class="article_text-4">
                 <h2>○ 衣装について</h2>
                 <p class="flow-text">
@@ -190,27 +224,14 @@
         </div>
     </div>
 
-    <div class="slide_wrapper" style="height: 60vh; display:flex; justify-content:center; align-items:center;">
-        <div id="snoopy-img1">
-            <img id="snoopy-love" src="./img/snoopy/love.png" alt="" height="240">
+    <div class="slide_wrapper" style="height: 60vmax; display:flex; justify-content:center; align-items:center;">
+        <div id="love-snoopy-area">
+            <img id="love-snoopy" src="./img/snoopy/love.png" alt="">
         </div>
     </div>
 
-<!--        <div class="slide_wrapper">-->
-<!--            <div class="contants">-->
-<!--                <svg viewBox="0 0 400 500" id="snoopy-img1">-->
-<!--                    <mask id="myMask">-->
-<!--                        &lt;!&ndash; <path id="wobble" d="M53.48-414.83C-36.82-373-33.76-278.17-19.91-194c12.17,74,66.56,136.46,2.05,205.61s-109.6,66-153.69,147.16,31,143.15-55,230.15-274,14.62-267,206S-750.66,726.14-680.2,819.76c75,99.68,487.9,207.62,632,282.55,342.19,177.9,764,148.24,902.86-42.68C994.14,867.89,1031.26,327.21,819.11-35.12,647.45-328.3,300.19-406.44,276.48-428.27,223.48-477.07,92.55-432.94,53.48-414.83Z" fill="white" />&ndash;&gt;-->
-<!--                        <img id="snoopy-love" src="./img/snoopy/love.png" alt="">-->
-<!--                    </mask>-->
-<!--                    <image x="0" y="0" height="100%" width="100%" href="https://images.unsplash.com/photo-1508775688883-baed6b7faec1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&h=1000&q=80&crop=entropy" preserveAspectRatio="xMidYMid slice" mask="url(#myMask)" />-->
-<!--                </svg>-->
-<!--            </div>-->
-<!--        </div>-->
-
-
-    <div class="contants">
-        <div><img src="img/1.jpg"></div>
+    <div class="contents">
+        <div><img src="img/landscape/_DSC4991.jpg"></div>
         <div class="article_text" style="padding: 0 20px 0 20px">
             <h2>
                 ○お支払いについて
@@ -233,7 +254,7 @@
                 ○撮影データに関して
             </h2>
             <p>
-                Googleフォト・ギガファイル便・30daysAlbum ・Amazon Photo等にまとめたリンクをDMにてお送りください。
+                Googleフォト／ギガファイル便／Amazon Photo等にまとめたリンクをDMにてお送りください。
             </p>
             <p>
                 Twitter, Instagram等での掲載はタグ付けをしていただけると嬉しいです！
@@ -284,6 +305,7 @@
             <p>
                 以上、規約をよくお読みになり
                 <br>
+                <br>
                 * 撮影希望日
                 <br>
                 * 撮影開始時間～終了時間
@@ -292,32 +314,26 @@
                 <br>
                 <br>
                 をDMにてお送りください。
-                <br>
-                <br>
-                最後まで読んでくださりありがとうございました！！☺️
-                <br>
             </p>
         </div>
-        <div style="text-align: center; margin-top: 120px;">
+        <div style="text-align: center; padding-top: 5vmax; padding-bottom: 5vmax;">
+            <a href="https://twitter.com/misaphoto33" target="_blank">
+                <i class="fa-brands fa-twitter fa-xl" style="color: #55acee; font-size: 3.5em"></i>
+            </a>
+        </div>
+        <div class="article_text" style="padding: 0 20px 0 20px">
             <p>
-                <i class="fa-brands fa-twitter fa-xl" style="color: #55acee;"></i>
+                最後まで読んでくださりありがとうございました！！☺️
             </p>
         </div>
     </div>
 
-    <div class="slide_wrapper">
-        <div class="box">
-            <img src="./img/snoopy/woodstock.png" height="64">
-        </div>
-    </div>
-
-
-        <!--    <div class="contants">-->
+        <!--    <div class="contents">-->
 <!--        <div><img src="img/2.jpg"></div>-->
 <!--        <div><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div>-->
 <!--    </div>-->
 
-<!--    <div class="contants">-->
+<!--    <div class="contents">-->
 <!--        <div><img src="img/3.jpg"></div>-->
 <!--        <div><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div>-->
 <!--    </div>-->
@@ -327,75 +343,40 @@
             <ul class="slide">
 
                 <li class="singleslide">
-                    <div class="singleslide_image"><img src="img/slide1.jpg" alt="" /></div>
-                    <div class="singleslide_text">
-                        <div class="singleslide_text_body">
-                            <h4>No.1</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                    </div>
+                    <div class="singleslide_image"><img src="img/landscape/_DSC9702.jpg" alt="" /></div>
+<!--                    <div class="singleslide_text">-->
+<!--                        <div class="singleslide_text_body">-->
+<!--                            <h4>No.1</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
                 </li>
 
                 <li class="singleslide">
-                    <div class="singleslide_image"><img src="img/slide2.jpg" alt="" /></div>
-                    <div class="singleslide_text">
-                        <div class="singleslide_text_body">
-                            <h4>No.2</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                    </div>
+                    <div class="singleslide_image"><img src="img/landscape/_DSC4754.jpg" alt="" /></div>
                 </li>
 
                 <li class="singleslide">
-                    <div class="singleslide_image"><img src="img/slide3.jpg" alt="" /></div>
-                    <div class="singleslide_text">
-                        <div class="singleslide_text_body">
-                            <h4>No.3</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                    </div>
+                    <div class="singleslide_image"><img src="img/landscape/_DSC7942.jpg" alt="" /></div>
                 </li>
 
                 <li class="singleslide">
-                    <div class="singleslide_image"><img src="img/slide4.jpg" alt="" /></div>
-                    <div class="singleslide_text">
-                        <div class="singleslide_text_body">
-                            <h4>No.3</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                    </div>
+                    <div class="singleslide_image"><img src="img/landscape/_DSC6588.jpg" alt="" /></div>
                 </li>
 
                 <li class="singleslide">
-                    <div class="singleslide_image"><img src="img/slide5.jpg" alt="" /></div>
-                    <div class="singleslide_text">
-                        <div class="singleslide_text_body">
-                            <h4>No.3</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                    </div>
+                    <div class="singleslide_image"><img src="img/landscape/_DSC9008.jpg" alt="" /></div>
                 </li>
 
                 <li class="singleslide">
-                    <div class="singleslide_image"><img src="img/slide6.jpg" alt="" /></div>
-                    <div class="singleslide_text">
-                        <div class="singleslide_text_body">
-                            <h4>No.3</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                    </div>
+                    <div class="singleslide_image"><img src="img/landscape/_DSC4822.jpg" alt="" /></div>
                 </li>
 
                 <li class="singleslide">
-                    <div class="singleslide_image"><img src="img/slide7.jpg" alt="" /></div>
-                    <div class="singleslide_text">
-                        <div class="singleslide_text_body">
-                            <h4>No.3</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                    </div>
+                    <div class="singleslide_image"><img src="img/landscape/_DSC9979.jpg" alt="" /></div>
                 </li>
 
                 <li class="singleslide">
-                    <div class="singleslide_image"><img src="img/slide8.jpg" alt="" /></div>
-                    <div class="singleslide_text">
-                        <div class="singleslide_text_body">
-                            <h4>No.3</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                    </div>
+                    <div class="singleslide_image"><img src="img/landscape/_Z9B4442.jpg" alt="" /></div>
                 </li>
 
             </ul>
@@ -405,43 +386,52 @@
     <div class="area50">
         <div class="wrap50">
             <div class="waku50"></div>
-            <div class="pn50 pn51"><span>1</span></div>
-            <div class="pn50 pn52"><span>2</span></div>
-            <div class="pn50 pn53"><span>3</span></div>
+            <div class="pn50 pn51">
+                <img src="img/portrait/_DSC3648.jpg" height="100%">
+            </div>
+            <div class="pn50 pn52">
+                <img src="img/portrait/2.jpg" height="100%">
+            </div>
+            <div class="pn50 pn53">
+                <img src="img/portrait/_DSC9385_retouch.jpg" height="auto" width="100%">
+            </div>
         </div>
     </div>
 
-    <div class="bottom-1">
-        <p class="bottom_text-1 bottom_text__left js-bottom_left-1">
+    <div class="last-msg-area">
+        <p class="flow-text bottom_text-1 bottom_text__left js-bottom_left-1">
             皆様と
         </p>
-        <p class="bottom_text-1 bottom_text__rigth js-bottom_right-1">
+        <p class="flow-text bottom_text-1 bottom_text__rigth js-bottom_right-1">
             色んな楽しい撮影が
         </p>
-        <p class="bottom_text-1 bottom_text__left js-bottom_left-1">
+        <p class="flow-text bottom_text-1 bottom_text__left js-bottom_left-1">
             出来ますように✨
         </p>
-        <p class="bottom_text-1 bottom_text__rigth js-bottom_right-1">
+        <p class="flow-text bottom_text-1 bottom_text__rigth js-bottom_right-1">
             宜しくお願い致します！
         </p>
     </div>
 
-<!--    <div class="bottom-2 is-crossed-2">-->
-<!--        <p class="bottom_text-2 bottom_text__left js-bottom_left-2">End</p>-->
-<!--        <p class="bottom_text-2 bottom_text__rigth js-bottom_right-2">Footer</p>-->
-<!--    </div>-->
-
-    <div class="slide_wrapper">
-        <div id="snoopy-area" class="contants">
-            <img id="snoopy" src="./img/snoopy/snoopy-silhouette.png" height="100" alt="">
+    <div class="slide_wrapper" style="position: relative;">
+        <div id="scale-snoopy-area" class="contents">
+            <img id="scale-snoopy" src="./img/snoopy/snoopy-silhouette.png" height="100" alt="" style="margin-top: 20vmax;">
+            <div class="name-sign">
+                <p>
+                    みさ
+                </p>
+            </div>
+        </div>
+<!--        <svg class="mainSVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 800 600" style="position: absolute;">-->
+            <path class="treeBottomPath" stroke="none" fill="none" stroke-width="8" d="M207.5,484.1c0,0,58.5-43.1,211.1-3.1s191-16.9,191-16.9"></path>
+<!--        </svg>-->
+        <div class="woodstock-wrap" style="position: absolute; text-align: center; width: 50%;">
+            <img id="woodstock" src="./img/snoopy/woodstock.png" height="64">
         </div>
     </div>
 
     <div style="height: 120px; width: 100%; text-align: center; position: relative">
-        <p class="name-sign">
-            みさ
-        </p>
-        <svg id="footSVG" viewBox="0 0 400 200" style="width: 80vw;">
+        <svg id="footSVG" viewBox="0 0 400 200" style="height: 15vmax;">
             <image opacity="0.65" mask="url('#footMask')" preserveAspectRatio="xMidYMid slice" href="./img/snoopy/foot.png" width="100%" />
             <mask id="footMask">
                 <path id="footPath" d="M53.48-414.83C-36.82-373-33.76-278.17-19.91-194c12.17,74,66.56,136.46,2.05,205.61s-109.6,66-153.69,147.16,31,143.15-55,230.15-274,14.62-267,206S-750.66,726.14-680.2,819.76c75,99.68,487.9,207.62,632,282.55,342.19,177.9,764,148.24,902.86-42.68C994.14,867.89,1031.26,327.21,819.11-35.12,647.45-328.3,300.19-406.44,276.48-428.27,223.48-477.07,92.55-432.94,53.48-414.83Z" fill="white" />
@@ -458,8 +448,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <!-- GSAP読み込み -->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/MotionPathPlugin.min.js"></script>
 <script defer="" src="js/main.js"></script>
 

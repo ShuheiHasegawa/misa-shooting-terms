@@ -1,26 +1,23 @@
 @charset "utf-8";
 
-@font-face {
-    font-family: FontSnoopy;
-    src: url('/fonts/snoopy_reg-webfont.otf');
-}
+/*@font-face {*/
+/*    font-family: FontSnoopy;*/
+/*    src: url('/fonts/snoopy_reg-webfont.otf');*/
+/*}*/
 
 /* @font-face kit by Fonts2u (https://fonts2u.com) */
-@font-face {
-    font-family: Peanuts;
-    src:url('/fonts/PEANUTS_.eot?') format('eot'),
-    url('/fonts/PEANUTS_.woff') format('woff'),
-    url('/fonts/PEANUTS_.ttf') format('truetype'),
-    url('/fonts/PEANUTS_.svg#Peanuts') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-.font-snoopy {
-    /* font-family:'FontSnoopy'; */
-    font-family: Peanuts, serif;
-
-    /* font-size:200%; */
-}
+/*@font-face {*/
+/*    font-family: Peanuts;*/
+/*    src:url('/fonts/PEANUTS_.eot?') format('eot'),*/
+/*    url('/fonts/PEANUTS_.woff') format('woff'),*/
+/*    url('/fonts/PEANUTS_.ttf') format('truetype'),*/
+/*    url('/fonts/PEANUTS_.svg#Peanuts') format('svg');*/
+/*    font-weight: normal;*/
+/*    font-style: normal;*/
+/*}*/
+/*.font-snoopy {*/
+/*    font-family: Peanuts, serif;*/
+/*}*/
 
 body {
     /* font-family:'Peanuts'; */
@@ -47,6 +44,30 @@ body {
 main {
     display: block;
     flex: 1;
+}
+
+#video-area{
+    /*position: fixed;*/
+    /*z-index: -1;!*最背面に設定*!*/
+    /*top: 0;*/
+    /*right:0;*/
+    /*left:0;*/
+    /*bottom:0;*/
+    overflow: hidden;
+}
+
+#video {
+    /*天地中央配置*/
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*縦横幅指定*/
+    width: 177.77777778vh; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+    height: 56.25vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+    min-height: 100%;
+    min-width: 100%;
 }
 
 #misaLogo {
@@ -240,13 +261,13 @@ main {
     letter-spacing: .30rem;
 }
 
-.contants{
+.contents {
     position:relative;
-    width:50%;
+    width:50vmax;
     margin:4rem auto;
     text-align:left;
 }
-.contants img{
+.contents img{
     max-width:100%;
     height:auto;
     border-radius:20px;
@@ -287,12 +308,12 @@ main {
     .c-header {
         top: 0%;
     }
-    .contants{
+    .contents {
         width:94%;
     }
     .c-mv-pic>div:nth-child(1) {
         width: 140px;
-        left: 0%;
+        left: 5%;
         top:0%;
     }
     .c-mv-pic>div:nth-child(2) {
@@ -308,12 +329,12 @@ main {
     }
     .c-mv-pic>div:nth-child(4) {
         width: 160px;
-        right: 0%;
+        right: 5%;
         top:3%;
     }
     .c-mv-pic>div:nth-child(5) {
         width: 130px;
-        left: 0%;
+        left: 5%;
         top:55%;
     }
     .c-mv-pic>div:nth-child(6) {
@@ -393,8 +414,12 @@ main {
         margin-left: 0;
     }
 
+    .c-mv-pic {
+        margin-top: 8.4rem;
+    }
+
     main {
-        padding-top: 8.4rem;
+        /*padding-top: 8.4rem;*/
     }
 
     .c-mv_tit-item {
@@ -424,7 +449,7 @@ section#snoopy > #content {
     height: 2500px;
 }
 
-#snoopy-area {
+#scale-snoopy-area {
     position: relative;
     height: 80vh;
     width: 100%;
@@ -432,7 +457,7 @@ section#snoopy > #content {
     place-content: center;
 }
 
-#snoopy-area img {
+#scale-snoopy-area img {
     height: 100px;
 }
 
@@ -449,14 +474,15 @@ section#snoopy > #content {
 {
     padding: 300px 30px 150px 0;
 }
-.section-2
+.section-2,
+.section-4
 {
     padding: 150px 0 300px 30px;
 }
-.section-4
-{
-    padding: 150px 0 0 30px;
-}
+/*.section-4*/
+/*{*/
+/*    padding: 150px 0 0 30px;*/
+/*}*/
 
 .article {
     position: relative;
@@ -529,9 +555,10 @@ section#snoopy > #content {
 .article_text>p
 {
     color: #0b0a0a;
-    font-size: 18px;
+    font-size: 1.2em;
     line-height: 1.8;
     text-align: justify;
+    padding-left: 1.4em;
 }
 
 .slideSection {
@@ -599,8 +626,7 @@ section#snoopy > #content {
     transition-duration: 0.5s;
 }
 
-.bottom-1,
-.bottom-2 {
+.last-msg-area {
     height: 100vh;
     width: 100%;
     display: flex;
@@ -609,25 +635,26 @@ section#snoopy > #content {
     justify-content: center;
     /*transition: background-color 0.7s ease-out;*/
     overflow: hidden;
-}
-.bottom_text-1,
-.bottom_text-2 {
-    font-size: 48px;
-    font-weight: bold;
-
-    /* font-family: "EB Garamond", serif; */
-}
-.bottom-1.is-crossed-1{
+    color: #fff;
     background: #0b0a0a;
 }
-.bottom-2.is-crossed-2{
-    background: #999999;
+.last-msg-area.is-crossed-1 {
+    background: #fff;
 }
-.bottom-1.is-crossed-1 .bottom_text-1 {
-    color: #ffffff;
-}
-.bottom-2.is-crossed-2 .bottom_text-2 {
+.last-msg-area.is-crossed-1 .bottom_text-1 {
+    /*color: #ffffff;*/
     color: #0b0a0a;
+}
+
+#snoopy-plain {
+    height: 25vmax;
+}
+#love-snoopy-area {
+    margin-top: 25vmax;
+    margin-bottom: 10vmax;
+}
+#love-snoopy {
+    height: 35vmax;
 }
 
 @media screen and (width >= 248px) and (width <= 768px){
@@ -638,16 +665,19 @@ section#snoopy > #content {
         font-size: 20px;
     }
     .section-1,
-    .section-2 {
+    .section-2,
+    .section-3,
+    .section-4
+    {
         padding-top:150px;
         padding-bottom:0;
         min-height:auto;
     }
-    .section-1{
-        padding-left:0;
-        padding-right:0;
-    }
-    .section-2{
+    .section-1,
+    .section-2,
+    .section-3,
+    .section-4
+    {
         padding-left:0;
         padding-right:0;
     }
@@ -655,7 +685,10 @@ section#snoopy > #content {
         margin-bottom: 100px;
     }
     .article_image-1,
-    .article_image-2 {
+    .article_image-2,
+    .article_image-3,
+    .article_image-4
+    {
         width: 90%;
         margin-bottom: 50px;
     }
@@ -664,7 +697,7 @@ section#snoopy > #content {
     .article_text-3,
     .article_text-4
     {
-        width: 80%;
+        width: 90%;
         padding: 16px;
     }
 
@@ -704,26 +737,36 @@ section#snoopy > #content {
 }
 
 .name-sign {
-    position: absolute;
+    /*position: absolute;*/
     /*top: 50%;*/
-    top: -35vh;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    /*bottom: 15vmax;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%,-50%);*/
     font-size: 24px;
+    text-align: center;
+    /*margin-top: 20vmax;*/
+    padding-top: 2vmax;
 }
 
-.area50{
+.area50 {
     overflow: hidden;
 }
-.wrap50{
-    position: relative; height: 100vh;
+.wrap50 {
+    position: relative;
+    height: 100vh;
 }
-.waku50{
-    height: 100%;
+.waku50 {
+    height: 100vh;
 }
-.pn50{
+.pn50 {
     position: absolute;
 }
-.pn51{ background: #346c9c; }
-.pn52{ background: #b1c3cb; }
-.pn53{ background: #595757; }
+.pn51 {
+    /*background: #346c9c;*/
+}
+.pn52 {
+    /*background: #b1c3cb;*/
+}
+.pn53 {
+    /*background: #595757;*/
+}
